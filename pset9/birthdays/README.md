@@ -1,4 +1,4 @@
-# Specification
+## Specification
 
 Create a web application to let users store and keep track of friends' birthdays.
 
@@ -9,3 +9,9 @@ Create a web application to let users store and keep track of friends' birthdays
     * First, in index.html, add an HTML form. The form should let users type in a name, a birthday month, and a birthday day. Be sure the form submits to ```/``` (its “action”) with a method of post.
     * Then, in application.py, add logic in your POST request handling to INSERT a new row into the birthdays table based on the data supplied by the user.
 * Add the ability to delete and edit birthday entries.
+
+## Usage
+```bash
+pip install Flask
+flask run
+```
