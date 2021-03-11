@@ -52,6 +52,6 @@ This repository holds the programs I wrote as part of Harvard University's [CS50
 | [5](https://cs50.harvard.edu/x/2021/psets/5/)         | Inheritance, Speller                                                     | C                                         |
 | [6](https://cs50.harvard.edu/x/2021/psets/6/)         | World Cup, Mario, Cash, Credit, Readability, DNA                         | Python                                    |
 | [7](https://cs50.harvard.edu/x/2021/psets/7/)         | Songs, Movies, Fiftyville                                                | SQL                                       |
-| [8](https://cs50.harvard.edu/x/2021/psets/8/)         | [Trivia](https://github.com/DanielTsiang/trivia), [Profile](https://github.com/DanielTsiang/profile) | HTML, CSS, JavaScript |
+| [8](https://cs50.harvard.edu/x/2021/psets/8/)         | [Trivia](https://github.com/DanielTsiang/trivia), [Profile](https://github.com/DanielTsiang/danieltsiang.github.io) | HTML, CSS, JavaScript |
 | [9](https://cs50.harvard.edu/x/2021/psets/9/)         | Birthdays, Finance                                                       | Flask, Python, SQL, HTML, CSS, JavaScript |
 | [10](https://cs50.harvard.edu/x/2021/psets/10/)       | Ethics, Final Project                                                    | N/A                                       |
