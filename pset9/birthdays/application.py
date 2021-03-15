@@ -51,9 +51,13 @@ def edit():
     name = request.form.get("EditName")
     day = request.form.get("EditDay")
     month = request.form.get("EditMonth")
+    
+    # Select old data from database row
+    old = db.execute("SELECT * FROM birthdays WHERE id = ?", id)[0]
 
-    # Update data in database
-    db.execute("UPDATE birthdays SET name = ?, day = ?, month = ? WHERE id = ?", name, day, month, id)
+    # Update data in database row for new values given by user, keep old data if no new value given
+    db.execute("UPDATE birthdays SET name = coalesce(NULLIF(?, ''), ?), day = coalesce(NULLIF(?, ''), ?), month = coalesce(NULLIF(?, ''), ?) WHERE id = ?",
+    name, old["name"], day, old["day"], month, old["month"], id)
 
     # Go back to homepage
     return redirect("/")
