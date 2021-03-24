@@ -32,27 +32,33 @@ body {
     padding-top: 0.5rem;
 }
 
-.section:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
-}
-
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
 }
 
+#first-h2 {
+    margin-bottom: 1.5rem;
+}
+
 button, input[type="submit"] {
     background-color: #d9edff;
-    border: 1px solid transparent;
+    border: 0.06rem solid transparent;
     border-radius: 0.25rem;
     font-size: 0.95rem;
     font-weight: 400;
     line-height: 1.5;
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem;
     text-align: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     vertical-align: middle;
+    margin: 0.5rem;
+    max-height: 2.5rem;
+}
+
+.insert-row {
+    min-width: 10rem;
+    margin: 0rem;
 }
 
 .header-input {
@@ -88,4 +94,36 @@ tbody tr:nth-of-type(odd) {
 
 .modal {
     text-align: left
+}
+
+.btn-close {
+    margin: 0;
+}
+
+label {
+    margin-top: 0.5rem;
+}
+
+/* Selects all <span> elements with class="has-error" */
+span.has-error {
+    font-size: small;
+    color: red;
+    display:block;
+}
+
+/* Selects all <span> elements with class="has-error" */
+span.has-success {
+    font-size: small;
+    color: green;
+    display:block;
+}
+
+/* Selects all <input> elements with class="has-error" */
+input.has-error  {
+    border: 0.125rem solid red;
+}
+
+/* Selects all <input> elements with class="has-success" */
+input.has-success  {
+    border: 0.125rem solid #4CAF50;
 }
