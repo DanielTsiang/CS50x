@@ -2,6 +2,7 @@ import os
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
+import json
 
 # Configure application
 app = Flask(__name__)
@@ -9,8 +10,15 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+# Custom filter for date
+def date(value):
+    return str(value).zfill(2)
+
+# Custom filters
+app.jinja_env.filters["date"] = date
+
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///birthdays.db")
+db = SQL("sqlite:///birthdays.db", connect_args={"check_same_thread":False})
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -23,15 +31,20 @@ def index():
         # Insert data into database
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
 
-        # Go back to homepage
-        return redirect("/")
+        # Return success status
+        return jsonify(True)
 
     else:
-        # Query for all birthdays
-        birthdays = db.execute("SELECT * FROM birthdays")
-
         # Render birthdays page
-        return render_template("index.html", birthdays=birthdays)
+        return render_template("index.html")
+
+@app.route("/data", methods=["GET"])
+def data():
+    # Query for all birthdays
+    birthdays = db.execute("SELECT * FROM birthdays")
+
+    # Return birthdays data as JSON
+    return jsonify({"data": birthdays})
 
 @app.route("/delete", methods=["POST"])
 def delete():
@@ -41,17 +54,17 @@ def delete():
     # Delete data from database
     db.execute("DELETE FROM birthdays WHERE id = ?", id)
 
-    # Go back to homepage
-    return redirect("/")
+    # Return success status
+    return jsonify(True)
 
-@app.route("/edit", methods=["POST"])
-def edit():
+@app.route("/update", methods=["POST"])
+def update():
     # Access form data
-    id = request.form.get("EditId")
-    name = request.form.get("EditName")
-    day = request.form.get("EditDay")
-    month = request.form.get("EditMonth")
-    
+    id = request.form.get("UpdateId")
+    name = request.form.get("UpdateName")
+    day = request.form.get("UpdateDay")
+    month = request.form.get("UpdateMonth")
+
     # Select old data from database row
     old = db.execute("SELECT * FROM birthdays WHERE id = ?", id)[0]
 
@@ -59,5 +72,5 @@ def edit():
     db.execute("UPDATE birthdays SET name = coalesce(NULLIF(?, ''), ?), day = coalesce(NULLIF(?, ''), ?), month = coalesce(NULLIF(?, ''), ?) WHERE id = ?",
     name, old["name"], day, old["day"], month, old["month"], id)
 
-    # Go back to homepage
-    return redirect("/")
+    # Return success status
+    return jsonify(True)
