@@ -6,6 +6,8 @@ Create a web application to let users store and keep track of friends' birthdays
 * User inputs are validated before submission to ensure only valid information is stored in the database.
 * Web application can add and delete birthday entries from the database, and dynamically updates the table without page refresh using AJAX.
 * User can dynamically update edit part or all of a birthday entry, depending if user supplies updated information.
+* User can search and sort data in table, and change number of displayed entries.
+
 
 ## Usage
 ```bash
