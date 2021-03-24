@@ -111,7 +111,7 @@ span.has-error {
     display:block;
 }
 
-/* Selects all <span> elements with class="has-error" */
+/* Selects all <span> elements with class="has-success" */
 span.has-success {
     font-size: small;
     color: green;
