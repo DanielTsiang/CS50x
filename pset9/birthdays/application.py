@@ -3,6 +3,7 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 import json
+from datetime import datetime
 
 # Configure application
 app = Flask(__name__)
@@ -10,12 +11,13 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-# Custom filter for date
-def date(value):
-    return str(value).zfill(2)
+# Custom filter for datetimeformat
+def datetimeformat(dt_string, format="%d-%m-%Y"):
+    dt_object = datetime.strptime(dt_string, "%Y-%m-%d")
+    return dt_object.strftime(format)
 
 # Custom filters
-app.jinja_env.filters["date"] = date
+app.jinja_env.filters["datetimeformat"] = datetimeformat
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///birthdays.db", connect_args={"check_same_thread":False})
@@ -25,11 +27,10 @@ def index():
     if request.method == "POST":
         # Access form data
         name = request.form.get("name")
-        month = request.form.get("month")
-        day = request.form.get("day")
+        birthday = datetimeformat(request.form.get("birthday"))
 
         # Insert data into database
-        db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
+        db.execute("INSERT INTO birthdays (name, birthday) VALUES (?, ?)", name, birthday)
 
         # Return success status
         return jsonify(True)
@@ -62,15 +63,14 @@ def update():
     # Access form data
     id = request.form.get("UpdateId")
     name = request.form.get("UpdateName")
-    day = request.form.get("UpdateDay")
-    month = request.form.get("UpdateMonth")
+    birthday = datetimeformat(request.form.get("UpdateBirthday"))
 
     # Select old data from database row
     old = db.execute("SELECT * FROM birthdays WHERE id = ?", id)[0]
 
     # Update data in database row for new values given by user, keep old data if no new value given
-    db.execute("UPDATE birthdays SET name = coalesce(NULLIF(?, ''), ?), day = coalesce(NULLIF(?, ''), ?), month = coalesce(NULLIF(?, ''), ?) WHERE id = ?",
-    name, old["name"], day, old["day"], month, old["month"], id)
+    db.execute("UPDATE birthdays SET name = coalesce(NULLIF(?, ''), ?), birthday = coalesce(NULLIF(?, ''), ?) WHERE id = ?",
+    name, old["name"], birthday, old["birthday"], id)
 
     # Return success status
     return jsonify(True)
