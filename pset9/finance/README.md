@@ -1,11 +1,22 @@
-# Specification
+## Description
+A website via which users can create an account to ìbuyî and ìsellî stocks.
 
-Implement a website via which users can ‚Äúbuy‚Äù and ‚Äúsell‚Äù stocks.
+### Demo
 
-* Complete the implementation of ```register``` in such a way that it allows a user to register for an account via a form.
-* Complete the implementation of ```quote``` in such a way that it allows a user to look up a stock‚Äôs current price.
-* Complete the implementation of ```buy``` in such a way that it enables a user to buy stocks.
-* Complete the implementation of ```index``` in such a way that it displays an HTML table summarizing, for the user currently logged in, which stocks the user owns, the numbers of shares owned, the current price of each stock, and the total value of each holding (i.e., shares times price). Also display the user‚Äôs current cash balance along with a grand total (i.e., stocks‚Äô total value plus cash).
-* Complete the implementation of ```sell``` in such a way that it enables a user to sell shares of a stock (that he or she owns).
-* Complete the implementation of ```history``` in such a way that it displays an HTML table summarizing all of a user‚Äôs transactions ever, listing row by row each and every buy and every sell.
+<img src="https://user-images.githubusercontent.com/74436899/112735596-1f905480-8f45-11eb-9866-be901c8e0812.gif" width="600px" height="433px" alt="demo">
 
+### Specification
+
+* Implement ```register``` in such a way that it allows a user to register for an account via a form.
+* Implement ```quote``` in such a way that it allows a user to look up a stockís current price.
+* Implement ```buy``` in such a way that it enables a user to buy stocks.
+* Implement ```index``` in such a way that it displays an HTML table summarising, for the user currently logged in, which stocks the user owns, the numbers of shares owned, the current price of each stock, and the total value of each holding (i.e., shares times price). Also display the userís current cash balance along with a grand total (i.e., stocksí total value plus cash).
+* Implement ```sell``` in such a way that it enables a user to sell shares of a stock (that he or she owns).
+* Implement ```history``` in such a way that it displays an HTML table summarising all of a userís transactions ever, listing row by row each and every buy and every sell.
+
+
+## Usage
+```bash
+pip install Flask
+flask run
+```
