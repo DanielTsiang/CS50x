@@ -1,5 +1,5 @@
 ## Description
-Create a web application to let users store and keep track of friends' birthdays.
+A dynamic web application to let users store and keep track of friends' birthdays.
 
 ### Demo
 
@@ -13,6 +13,7 @@ Create a web application to let users store and keep track of friends' birthdays
 * User can dynamically update edit part or all of a birthday entry, depending if user supplies updated information.
 * User can search and sort data in table, and change number of displayed entries.
 * Alert message displayed on the page after user completes action, then disappears automatically.
+* Built using JavaScript with jQuery, styled with CSS. Designed to work on PC and mobile devices.
 
 
 ## Usage
