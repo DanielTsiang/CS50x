@@ -1,6 +1,11 @@
-## Specification
-
+## Description
 Create a web application to let users store and keep track of friends' birthdays.
+
+### Demo
+
+<img src="https://user-images.githubusercontent.com/74436899/112734248-7d6c6e80-8f3c-11eb-9066-95dec9380b41.gif" width="600px" height="433px" alt="demo">
+
+### Specification
 
 * Web application displays, in a table, all of the people in the database along with their birthdays.
 * User inputs are validated before submission to ensure only valid information is stored in the database.
