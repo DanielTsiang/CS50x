@@ -63,7 +63,14 @@ def update():
     # Access form data
     id = request.form.get("UpdateId")
     name = request.form.get("UpdateName")
-    birthday = datetimeformat(request.form.get("UpdateBirthday"))
+    get_birthday = request.form.get("UpdateBirthday")
+
+    # user did not update birthday
+    if not get_birthday:
+        birthday = get_birthday
+    # user updated birthday
+    else:
+        birthday = datetimeformat(get_birthday)
 
     # Select old data from database row
     old = db.execute("SELECT * FROM birthdays WHERE id = ?", id)[0]
