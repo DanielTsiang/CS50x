@@ -84,6 +84,9 @@ $(function() {
                 $("#delete-birthday").fadeIn().fadeTo(2000, 500).slideUp(500, function() {
                     $("#delete-birthday").slideUp(500);
                 });
+            },
+            error: function(xhr, status, error) {
+                alert(`${status}: ${error}`);
             }
         });
     });
