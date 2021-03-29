@@ -141,6 +141,9 @@ $(function() {
                 },
                 dataType: "json",
                 success: function() {
+                    // Reset form
+                    $("#birthday-form")[0].reset();
+
                     // Remove validation classes and errorElements
                     $("input, span").removeClass("has-error has-success");
                     $("span").remove()
@@ -157,7 +160,6 @@ $(function() {
                     alert(`${status}: ${error}`);
                 }
             });
-            $("#birthday-form")[0].reset();
         }
     });
 
