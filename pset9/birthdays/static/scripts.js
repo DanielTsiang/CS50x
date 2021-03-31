@@ -5,7 +5,7 @@ $(function() {
 
     // Load table
     var birthdaysDataTable = $("#birthdays").DataTable({
-        scrollY: 400,
+        scrollY: "35rem",
         "order": [[0, "asc"]],
         "ajax": {
             "url": "/data",
