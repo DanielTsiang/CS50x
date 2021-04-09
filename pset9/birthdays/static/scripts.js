@@ -97,16 +97,20 @@ $(function() {
         errorClass: "has-error",
         validClass: "has-success",
         highlight: function(element, errorClass, validClass) {
-            $(element).closest('.form-control').addClass(errorClass).removeClass(validClass);
+            $(element).closest(".form-control").addClass(errorClass).removeClass(validClass);
         },
         unhighlight: function(element, errorClass, validClass) {
-            $(element).closest('.form-control').removeClass(errorClass).addClass(validClass);
+            $(element).closest(".form-control").removeClass(errorClass).addClass(validClass);
         },
         errorPlacement: function(error, element) {
-            error.insertAfter(element);
-        },
+			if (element.parent(".input-group").length) {
+				error.insertAfter(element.parent());
+			} else {
+			    error.insertAfter(element);
+			}
+		},
         success: function(label) {
-            label.addClass("has-success").text("Ok!")
+            label.addClass("has-success").text("Ok!");
         },
     });
 
