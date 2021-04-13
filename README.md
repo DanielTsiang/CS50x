@@ -54,4 +54,4 @@ This repository holds the programs I wrote as part of Harvard University's [CS50
 | [7](https://cs50.harvard.edu/x/2021/psets/7/)         | Songs, Movies, Fiftyville                                                | SQL                                       |
 | [8](https://cs50.harvard.edu/x/2021/psets/8/)         | [Trivia](https://github.com/DanielTsiang/trivia), [Profile](https://github.com/DanielTsiang/danieltsiang.github.io) | HTML, CSS, JavaScript |
 | [9](https://cs50.harvard.edu/x/2021/psets/9/)         | Birthdays, Finance                                                       | Flask, Python, SQL, HTML, CSS, JavaScript |
-| [10](https://cs50.harvard.edu/x/2021/psets/10/)       | Ethics, [Final Project](https://github.com/DanielTsiang/stock-simulator) | N/A                                       |
+| [10](https://cs50.harvard.edu/x/2021/psets/10/)       | Ethics, [Final Project](https://github.com/DanielTsiang/stock-simulator) | Flask, Python, SQL, HTML, CSS, JavaScript |
