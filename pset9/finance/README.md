@@ -17,6 +17,6 @@ A website via which users can create an account to simulate buying and selling s
 
 ## Usage
 ```bash
-pip install Flask
+pip3 install -r requirements.txt
 flask run
 ```
