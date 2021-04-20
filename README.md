@@ -46,7 +46,7 @@ This repository holds the programs I wrote as part of Harvard University's [CS50
 | :---------------------------------------------------: | ------------------------------------------------------------------------ | :---------------------------------------: |
 | [0](https://cs50.harvard.edu/x/2021/psets/0/scratch/) | [Dragon Ball Interactive Story](https://github.com/DanielTsiang/Scratch) | Scratch                                   |
 | [1](https://cs50.harvard.edu/x/2021/psets/1/)         | Population, Mario, Cash, Credit                                          | C                                         |
-| [2](https://cs50.harvard.edu/x/2021/psets/2/)         | Scrabble, Readability, Caesar, Substituion                               | C                                         |
+| [2](https://cs50.harvard.edu/x/2021/psets/2/)         | Scrabble, Readability, Caesar, Substitution                              | C                                         |
 | [3](https://cs50.harvard.edu/x/2021/psets/3/)         | Plurality, Runoff, Tideman                                               | C                                         |
 | [4](https://cs50.harvard.edu/x/2021/psets/4/)         | Volume, Filter, Recover                                                  | C                                         |
 | [5](https://cs50.harvard.edu/x/2021/psets/5/)         | Inheritance, Speller                                                     | C                                         |
