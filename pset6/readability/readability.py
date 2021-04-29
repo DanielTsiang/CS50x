@@ -11,11 +11,7 @@ def main():
     words = spaces + 1
 
     # calculate number of sentend in string
-    sentences = 0
-    for char in string:
-        if char in [".", "?", "!"]:
-            sentences += 1
-
+    sentences = sum(1 for char in string if char in [".", "?", "!"])
     # calculate Coleman-Liau index
     index = get_index(letters, words, sentences)
 
@@ -27,8 +23,7 @@ def get_index(letters, words, sentences):
     # Reading level is from Coleman-Liau index = 0.0588 * L - 0.296 * S - 15.8
     L = (letters / words) * 100
     S = (sentences / words) * 100
-    index = round(0.0588 * L - 0.296 * S - 15.8)
-    return index
+    return round(0.0588 * L - 0.296 * S - 15.8)
 
 
 def print_index(index):

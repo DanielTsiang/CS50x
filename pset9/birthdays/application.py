@@ -24,20 +24,19 @@ db = SQL("sqlite:///birthdays.db", connect_args={"check_same_thread":False})
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
-        # Access form data
-        name = request.form.get("name")
-        birthday = datetimeformat(request.form.get("birthday"))
-
-        # Insert data into database
-        db.execute("INSERT INTO birthdays (name, birthday) VALUES (?, ?)", name, birthday)
-
-        # Return success status
-        return jsonify(True)
-
-    else:
+    if request.method != "POST":
         # Render birthdays page
         return render_template("index.html")
+
+    # Access form data
+    name = request.form.get("name")
+    birthday = datetimeformat(request.form.get("birthday"))
+
+    # Insert data into database
+    db.execute("INSERT INTO birthdays (name, birthday) VALUES (?, ?)", name, birthday)
+
+    # Return success status
+    return jsonify(True)
 
 @app.route("/data", methods=["GET"])
 def data():
