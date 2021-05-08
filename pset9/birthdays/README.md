@@ -3,7 +3,7 @@ A dynamic web application to let users store and keep track of friends' birthday
 
 ### Demo
 
-<img src="https://user-images.githubusercontent.com/74436899/112734248-7d6c6e80-8f3c-11eb-9066-95dec9380b41.gif" width="600px" height="433px" alt="demo">
+<img src="https://user-images.githubusercontent.com/74436899/112734248-7d6c6e80-8f3c-11eb-9066-95dec9380b41.gif" width="600" height="433" alt="demo">
 
 ### Specification
 
