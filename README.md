@@ -42,16 +42,16 @@ This repository holds the programs I wrote as part of Harvard University's [CS50
 
 ### Problem Sets
 
-| Set                                                   | Name(s)                                                                  | Language                                  |
-| :---------------------------------------------------: | ------------------------------------------------------------------------ | :---------------------------------------: |
-| [0](https://cs50.harvard.edu/x/2021/psets/0/scratch/) | [Dragon Ball Interactive Story](https://github.com/DanielTsiang/Scratch) | Scratch                                   |
-| [1](https://cs50.harvard.edu/x/2021/psets/1/)         | Population, Mario, Cash, Credit                                          | C                                         |
-| [2](https://cs50.harvard.edu/x/2021/psets/2/)         | Scrabble, Readability, Caesar, Substitution                              | C                                         |
-| [3](https://cs50.harvard.edu/x/2021/psets/3/)         | Plurality, Runoff, Tideman                                               | C                                         |
-| [4](https://cs50.harvard.edu/x/2021/psets/4/)         | Volume, Filter, Recover                                                  | C                                         |
-| [5](https://cs50.harvard.edu/x/2021/psets/5/)         | Inheritance, Speller                                                     | C                                         |
-| [6](https://cs50.harvard.edu/x/2021/psets/6/)         | World Cup, Mario, Cash, Credit, Readability, DNA                         | Python                                    |
-| [7](https://cs50.harvard.edu/x/2021/psets/7/)         | Songs, Movies, Fiftyville                                                | SQL                                       |
-| [8](https://cs50.harvard.edu/x/2021/psets/8/)         | [Trivia](https://github.com/DanielTsiang/trivia), [Profile](https://github.com/DanielTsiang/danieltsiang.github.io) | HTML, CSS, JavaScript |
+| Set                                                   | Name(s)                                                                               | Language                     |
+| :---------------------------------------------------: | ------------------------------------------------------------------------------------- | :--------------------------: |
+| [0](https://cs50.harvard.edu/x/2021/psets/0/scratch/) | [Dragon Ball Interactive Story](https://daniel-tsiang-goku-vegeta-fight.netlify.app/) | Scratch                      |
+| [1](https://cs50.harvard.edu/x/2021/psets/1/)         | Population, Mario, Cash, Credit                                                       | C                            |
+| [2](https://cs50.harvard.edu/x/2021/psets/2/)         | Scrabble, Readability, Caesar, Substitution                                           | C                            |
+| [3](https://cs50.harvard.edu/x/2021/psets/3/)         | Plurality, Runoff, Tideman                                                            | C                            |
+| [4](https://cs50.harvard.edu/x/2021/psets/4/)         | Volume, Filter, Recover                                                               | C                            |
+| [5](https://cs50.harvard.edu/x/2021/psets/5/)         | Inheritance, Speller                                                                  | C                            |
+| [6](https://cs50.harvard.edu/x/2021/psets/6/)         | World Cup, Mario, Cash, Credit, Readability, DNA                                      | Python                       |
+| [7](https://cs50.harvard.edu/x/2021/psets/7/)         | Songs, Movies, Fiftyville                                                             | SQL                          |
+| [8](https://cs50.harvard.edu/x/2021/psets/8/)         | [Trivia](https://daniel-tsiang-trivia.netlify.app/), [Profile](https://github.com/DanielTsiang/danieltsiang.github.io) | HTML, CSS, JavaScript |
 | [9](https://cs50.harvard.edu/x/2021/psets/9/)         | Birthdays, Finance                                                       | Flask, Python, SQL, HTML, CSS, JavaScript |
 | [10](https://cs50.harvard.edu/x/2021/psets/10/)       | Ethics, [Final Project](https://github.com/DanielTsiang/stock-simulator) | Flask, Python, SQL, HTML, CSS, JavaScript |
