@@ -18,10 +18,10 @@ def card_algorithm(length, card_digits):
     card_sum = 0
     for i in range(length - 2, -1, -2):
         doubled_digit = card_digits[i] * 2
-        if (doubled_digit < 9):
+        if (doubled_digit <= 9):
             card_sum += doubled_digit
         else:
-            # doubled_digit is > 10 so need to split into individual digits again
+            # doubled_digit is > 9 so need to split into individual digits again
             digits = list(map(int, str(doubled_digit)))
             card_sum += digits[0] + digits[1]
 
